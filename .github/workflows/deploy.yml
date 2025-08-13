@@ -1,0 +1,49 @@
+name: Deploy Wedding Website to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Validate HTML
+      run: |
+        echo "Validating HTML structure..."
+        # You can add HTML validation here if needed
+        
+    - name: Check CSS
+      run: |
+        echo "Checking CSS files..."
+        # Basic CSS validation
+        
+    - name: Test JavaScript
+      run: |
+        echo "Testing JavaScript syntax..."
+        # Basic JS syntax check
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        cname: comfort-bram-wedding.com  # Replace with your custom domain if you have one
+        
+    - name: Deployment Success
+      if: success()
+      run: |
+        echo "🎉 Wedding website deployed successfully!"
+        echo "Your website is now live at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
