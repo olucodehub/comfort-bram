@@ -665,6 +665,157 @@ a:hover {
     left: 0;
 }
 
+/* Dress Code Section */
+.dress-code-section {
+    background: linear-gradient(135deg, var(--primary-burgundy), var(--primary-gold));
+    padding: 30px;
+    border-radius: var(--border-radius-large);
+    margin-bottom: 40px;
+    text-align: center;
+    color: white;
+}
+
+.dress-code-title {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: var(--text-shadow);
+}
+
+.dress-code-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.dress-code-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+}
+
+.dress-code-gender {
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.dress-code-color {
+    font-weight: 500;
+}
+
+/* New Schedule Grid Layout */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.schedule-block {
+    background: white;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-gold);
+}
+
+.schedule-block:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.schedule-block.ceremony-block {
+    border-left-color: var(--primary-burgundy);
+}
+
+.schedule-block.photos-block {
+    border-left-color: var(--primary-gold);
+}
+
+.schedule-block.reception-block {
+    border-left-color: var(--nigerian-green);
+}
+
+.schedule-block.dinner-block {
+    border-left-color: var(--accent-orange);
+}
+
+.schedule-block.evening-block {
+    border-left-color: var(--primary-gold);
+}
+
+.schedule-block.party-block {
+    border-left-color: var(--primary-burgundy);
+}
+
+.block-header {
+    background: linear-gradient(135deg, var(--soft-gray), white);
+    padding: 20px;
+    border-bottom: 1px solid var(--cream);
+}
+
+.block-header h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-burgundy);
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.block-time {
+    display: block;
+    font-weight: 700;
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.block-location {
+    display: block;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.block-content {
+    padding: 20px;
+}
+
+.time-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--cream);
+}
+
+.time-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.time-item .time {
+    background: var(--primary-gold);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.time-item .activity {
+    color: var(--text-dark);
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
 /* Venues Section */
 .venues {
     padding: var(--section-padding);
@@ -1573,6 +1724,58 @@ a:hover {
     
     .schedule-content {
         padding: 0;
+    }
+    
+    /* New Schedule Grid Responsive */
+    .dress-code-section {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .dress-code-title {
+        font-size: 1.5rem;
+    }
+    
+    .dress-code-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .schedule-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .schedule-block {
+        margin-bottom: 0;
+    }
+    
+    .block-header {
+        padding: 15px;
+    }
+    
+    .block-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .block-time {
+        font-size: 1rem;
+    }
+    
+    .block-content {
+        padding: 15px;
+    }
+    
+    .time-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .time-item .time {
+        min-width: auto;
+        margin-right: 0;
+        margin-bottom: 5px;
     }
     
     /* Venues */
