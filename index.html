@@ -616,10 +616,6 @@
                             <h4>Peppered Kpomo</h4>
                             <p>Spiced cow skin delicacy</p>
                         </div>
-                        <div class="menu-item">
-                            <h4>Egusi with Pounded Yam</h4>
-                            <p>Rich melon seed stew with traditional yam</p>
-                        </div>
                     </div>
                 </div>
 
@@ -699,43 +695,20 @@
                             <img src="./images/comfort3.jpg" alt="Comfort and Bram" loading="lazy">
                         </div>
                         <div class="photo-item" data-aos="zoom-in" data-aos-delay="300">
-                            <img src="./images/comfort4.jpg" alt="Comfort and Bram" loading="lazy">
+                            <img src="./images/comfort4.jpg" alt="Comfort and Bram" loading="lazy" onerror="this.style.display='none'">
                         </div>
+                    </div>
+                    
+                    <div class="gallery-cta" data-aos="fade-up" data-aos-delay="400">
+                        <a href="gallery.html" class="gallery-btn">
+                            <span class="btn-icon">📸</span>
+                            <span class="btn-text">Relive the Day: See the Photos!</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <p class="gallery-cta-subtitle">Browse through all our beautiful wedding moments</p>
                     </div>
                 </div>
 
-                <div class="guest-photos">
-                    <h3>Share Your Photos</h3>
-                    <p>Help us capture every moment of our special day! Upload your photos to share with the happy
-                        couple.</p>
-
-                    <div class="upload-section">
-                        <div class="upload-area" id="photo-upload">
-                            <div class="upload-icon">📷</div>
-                            <p>Click or drag photos here to upload</p>
-                            <input type="file" id="photo-input" multiple accept="image/*" style="display: none;">
-                            <button class="upload-btn" onclick="document.getElementById('photo-input').click()">Choose
-                                Photos</button>
-                        </div>
-
-                        <div class="qr-section">
-                            <h4>Quick Upload via QR Code</h4>
-                            <div class="qr-code">
-                                <!-- QR Code will be generated here -->
-                                <img src="./images/qr-placeholder.png" alt="QR Code for photo upload" id="qr-code">
-                            </div>
-                            <p>Scan this QR code with your phone to quickly upload photos</p>
-                        </div>
-                    </div>
-
-                    <div class="uploaded-photos" id="guest-gallery">
-                        <h4>Guest Photos</h4>
-                        <div class="guest-photo-grid">
-                            <!-- Guest uploaded photos will appear here -->
-                            <p class="no-photos">No photos uploaded yet. Be the first to share!</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
