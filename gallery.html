@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding Gallery - Comfort & Bram</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Browse through our beautiful wedding photos from Comfort and Bram's special day">
+    <meta name="keywords" content="Comfort Bram Wedding Gallery, Wedding Photos, Nigerian Dutch Wedding">
+    <meta name="author" content="Comfort & Bram">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Our Wedding Gallery - Comfort & Bram">
+    <meta property="og:description" content="Browse through our beautiful wedding photos">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/comfort1.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">C & B</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Back to Home</a>
+                <a href="index.html#story" class="nav-link">Our Story</a>
+                <a href="index.html#schedule" class="nav-link">Schedule</a>
+                <a href="index.html#venues" class="nav-link">Venues</a>
+                <a href="index.html#rsvp" class="nav-link">RSVP</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <div class="gallery-hero">
+                <h1 class="gallery-title">Our Wedding Gallery</h1>
+                <p class="gallery-subtitle">Relive the magical moments from our special day</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Gallery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-controls">
+                <div class="gallery-info">
+                    <span id="image-count">Loading images...</span>
+                </div>
+                <div class="view-controls">
+                    <button class="view-btn active" data-view="grid" title="Grid View">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </button>
+                    <button class="view-btn" data-view="masonry" title="Masonry View">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="3" y="3" width="7" height="5" rx="1"/>
+                            <rect x="14" y="3" width="7" height="9" rx="1"/>
+                            <rect x="3" y="10" width="7" height="9" rx="1"/>
+                            <rect x="14" y="14" width="7" height="5" rx="1"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Images will be dynamically loaded here -->
+            </div>
+
+            <!-- Loading indicator -->
+            <div class="loading-indicator" id="loading-indicator">
+                <div class="loading-spinner"></div>
+                <p>Loading beautiful memories...</p>
+            </div>
+
+            <!-- No images message -->
+            <div class="no-images" id="no-images" style="display: none;">
+                <p>No images found in the gallery.</p>
+                <a href="index.html" class="back-btn">Return to Homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="image-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <button class="modal-nav modal-prev" id="modal-prev">❮</button>
+            <button class="modal-nav modal-next" id="modal-next">❯</button>
+            <img class="modal-image" id="modal-image" alt="Gallery Image">
+            <div class="modal-info">
+                <p class="modal-counter" id="modal-counter"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Comfort & Bram. Made with ❤️ for our special day.</p>
+                    <p><a href="index.html">Return to Homepage</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/gallery.js"></script>
+</body>
+
+</html>
